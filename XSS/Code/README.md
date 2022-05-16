@@ -12,4 +12,15 @@
 
   ![CHESSE](../../img/1-.png)
 
-- 
+- Để khắc phục điều này, ta sẽ dùng thêm hàm <code>test_input</code>
+  ```php
+  function test_input($data)
+    {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+  ```
+- Đây là kết quả.
+  ![CHESSE](../../img/10.png)

@@ -24,6 +24,10 @@
     <?php
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
+
+        $page = str_replace(array("http://", "https://"), "", $page);
+        $page = str_replace(array("../"), "", $page);
+
         include($page);
     }
     ?>

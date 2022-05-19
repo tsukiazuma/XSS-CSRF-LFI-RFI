@@ -22,7 +22,7 @@
         <a href="index.php?page=rfi.php">Click to RFI</a>
     </div>
     <?php
-    if (isset($_GET['page'])) {
+    if (isset($_GET['page']) && $_GET['page'] == 'page') {
         $page = $_GET['page'];
 
         $page = str_replace(array("http://", "https://"), "", $page);

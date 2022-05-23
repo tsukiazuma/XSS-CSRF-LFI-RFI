@@ -12,7 +12,7 @@
 - Như vậy, kẻ tấn công đã có thể xâm nhập được hệ thống 1 cách dễ dàng.
 - Để ngăn chặn điều này, ta sử dụng hàm <code>str_place()</code> để xóa các giá trị được gán như <code>http://</code>, <code>https://</code>, các kí tự cho phép người dùng thoát khỏi thư mục và thay thế bằng giá trị " ".
   ```php
-  if (isset($_GET['page']) && $_GET['page'] == 'page') {
+  if (isset($_GET['page'])) {
         $page = $_GET['page'];
 
         $page = str_replace(array("http://", "https://"), "", $page);
